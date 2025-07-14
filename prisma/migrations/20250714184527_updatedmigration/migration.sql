@@ -11,7 +11,7 @@ CREATE TYPE "RecurringInterval" AS ENUM ('DAILY', 'WEEKLY', 'MONTHLY', 'YEARLY')
 CREATE TYPE "TransactionStatus" AS ENUM ('PENDING', 'COMPLETED', 'FAILED');
 
 -- CreateTable
-CREATE TABLE "('users)" (
+CREATE TABLE "users" (
     "id" TEXT NOT NULL,
     "clerkUserId" TEXT NOT NULL,
     "email" TEXT NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE "('users)" (
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
 
-    CONSTRAINT "('users)_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "users_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
@@ -72,10 +72,10 @@ CREATE TABLE "budgets" (
 );
 
 -- CreateIndex
-CREATE UNIQUE INDEX "('users)_clerkUserId_key" ON "('users)"("clerkUserId");
+CREATE UNIQUE INDEX "users_clerkUserId_key" ON "users"("clerkUserId");
 
 -- CreateIndex
-CREATE UNIQUE INDEX "('users)_email_key" ON "('users)"("email");
+CREATE UNIQUE INDEX "users_email_key" ON "users"("email");
 
 -- CreateIndex
 CREATE INDEX "accounts_userId_idx" ON "accounts"("userId");
@@ -93,13 +93,13 @@ CREATE UNIQUE INDEX "budgets_userId_key" ON "budgets"("userId");
 CREATE INDEX "budgets_userId_idx" ON "budgets"("userId");
 
 -- AddForeignKey
-ALTER TABLE "accounts" ADD CONSTRAINT "accounts_userId_fkey" FOREIGN KEY ("userId") REFERENCES "('users)"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE "accounts" ADD CONSTRAINT "accounts_userId_fkey" FOREIGN KEY ("userId") REFERENCES "users"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE "transaction" ADD CONSTRAINT "transaction_userId_fkey" FOREIGN KEY ("userId") REFERENCES "('users)"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE "transaction" ADD CONSTRAINT "transaction_userId_fkey" FOREIGN KEY ("userId") REFERENCES "users"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "transaction" ADD CONSTRAINT "transaction_accountId_fkey" FOREIGN KEY ("accountId") REFERENCES "accounts"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE "budgets" ADD CONSTRAINT "budgets_userId_fkey" FOREIGN KEY ("userId") REFERENCES "('users)"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE "budgets" ADD CONSTRAINT "budgets_userId_fkey" FOREIGN KEY ("userId") REFERENCES "users"("id") ON DELETE CASCADE ON UPDATE CASCADE;
