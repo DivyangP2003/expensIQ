@@ -38,20 +38,15 @@ const HeroSection = () => {
         </p>
         <div className="flex justify-center space-x-4">
           <Link href="/dashboard">
-            <Button size="lg" className="px-8 ">
+            <Button size="lg" className="px-8">
               Get Started
-            </Button>
-          </Link>
-          <Link href="https://youtu.be/egS6fnZAdzk?si=KthuUq3fsF3-QuBZ">
-            <Button size="lg" variant="outline" className="px-8 ">
-              Watch Demo
             </Button>
           </Link>
         </div>
         <div className="hero-image-wrapper">
           <div ref={imageRef} className="hero-image">
             <Image
-              src="/banner.jpg"
+              src="/banner.png"
               width={1280}
               height={720}
               alt="Dashboard Preview"
