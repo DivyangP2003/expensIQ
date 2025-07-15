@@ -52,7 +52,7 @@ A full-stack, AI-powered personal finance platform that helps users **track inco
 | Job Name             | Trigger            | Purpose |
 |----------------------|--------------------|---------|
 | `monthlyReport`      | 1st of each month  | Sends AI financial summary via email |
-| `dailyBudgetMonitor` | Daily @ 12AM       | Alerts when nearing budget threshold |
+| `dailyBudgetMonitor` | After every 6 hrs      | Alerts when nearing budget threshold |
 | `handleRecurringTx`  | Daily @ 12AM       | Adds recurring transactions automatically |
 
 ✅ Powered by [Inngest](https://www.inngest.com) – reliable, serverless job scheduling.
@@ -75,7 +75,7 @@ A full-stack, AI-powered personal finance platform that helps users **track inco
 | **Backend**  | Supabase (PostgreSQL), Prisma ORM |
 | **Authentication** | Clerk (Google login + user profile) |
 | **Email** | Resend |
-| ** Charts** | Recharts |
+| **Charts** | Recharts |
 | **AI/OCR**   | GEMINI API + custom OCR |
 | **Job Scheduling** | Inngest (CRON jobs, retries, queues) |
 | **Security** | Arkjet (bot detection, rate limiting) |
