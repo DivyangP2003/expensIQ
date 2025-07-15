@@ -29,7 +29,9 @@ const HeroSection = () => {
     <div className="pb-20 px-4">
       <div className="container mx-auto text-center">
         <h1 className="text-5xl md:text-8xl lg:text-[105px] pb-6 font-extrabold tracking-tighter pr-2 bg-gradient-to-br from-blue-600 to-purple-600 text-transparent bg-clip-text">
-          Manage Your Finances <br /> with Intelligence
+          Smarter Finance.
+          <br className="hidden md:block" />
+          Real-Time Intelligence.
         </h1>
 
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
