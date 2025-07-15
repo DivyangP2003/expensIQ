@@ -63,7 +63,7 @@ A full-stack, AI-powered personal finance platform that helps users **track inco
 
 | Landing Page | Dashboard |
 |--------------|-----------|
-| ![Landing](./public/landing-preview.png) | ![Dashboard](./public/dashboard-preview.png) |
+| ![Landing](./public/banner.png) | ![Dashboard](./public/dashboard-preview.png) |
 
 ---
 
