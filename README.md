@@ -2,6 +2,7 @@
 
 A full-stack, AI-powered personal finance platform that helps users **track income and expenses**, set and monitor **budgets**, receive **real-time alerts**, get **AI-generated monthly reports**, and gain **smart financial insights** — all within a modern, responsive web application.
 
+![Landing](./public/Landing_Page.png) 
 
 🔗 [Live Demo (Vercel)](https://expensiq.vercel.app)  
 
@@ -61,9 +62,17 @@ A full-stack, AI-powered personal finance platform that helps users **track inco
 
 ## 📸 Screenshots
 
-| Landing Page | Dashboard 
+| Landing Page | Dashboard |
 |--------------|-----------|
 | ![Landing](./public/Landing_Page.png) | ![Dashboard](./public/Dashboard.png) |
+
+| Account Page | Transaction(AI) Page |
+|--------------|-----------|
+| ![Landing](./public/Account_Analysis.png) | ![Dashboard](./public/TransactionEdit(AI).png) |
+
+| Daily Budget Email | Monthly Report Email |
+|--------------|-----------|
+| ![Landing](./public/Daily_Budget.png) | ![Dashboard](./public/Monthly_Report.png) |
 
 ---
 
