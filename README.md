@@ -2,7 +2,7 @@
 
 A full-stack, AI-powered finance management platform that helps you **track income, expenses, budgets**, and **analyze spending patterns** — all in one modern web application.
 
-🔗 [Live Demo (Vercel)](https://your-deployment-url.vercel.app)  
+🔗 [Live Demo (Vercel)](https://expensiq.vercel.app)  
 📌 Built with Next.js, Tailwind CSS, Clerk, Supabase, ShadCN, and **Inngest** for background jobs.
 
 ![Next.js](https://img.shields.io/badge/Next.js-black?logo=next.js)
@@ -36,8 +36,8 @@ Inngest handles all automated backend workflows in this project:
 | Job Name                  | Trigger              | Purpose |
 |--------------------------|----------------------|---------|
 | `monthlyReport`          | 1st of each month    | Emails AI-generated finance summaries |
-| `dailyBudgetMonitor`     | Daily @ 9PM          | Sends alerts if user nears budget |
-| `handleRecurringTx`      | Every few hours      | Automatically adds recurring transactions |
+| `dailyBudgetMonitor`     | Daily @ 12AM         | Sends alerts if user nears budget |
+| `handleRecurringTx`      | Daily @ 12AM         | Automatically adds recurring transactions |
 
 ✅ Jobs run asynchronously and reliably with automatic retries.
 
@@ -55,23 +55,15 @@ Inngest handles all automated backend workflows in this project:
 
 ## 🚀 Tech Stack
 
-| Category       | Stack                                           |
-|----------------|-------------------------------------------------|
-| **Frontend**   | Next.js 15, Tailwind CSS, ShadCN UI             |
-| **Backend**    | Supabase (Postgres), Prisma ORM                 |
-| **Auth**       | Clerk (OAuth2 - Google login)                   |
-| **AI**         | OpenAI / OCR for receipt parsing                |
-| **Jobs**       | Inngest (serverless, scheduled background jobs) |
-| **Security**   | Arkjet (bot protection, rate limiting)          |
-| **CI/CD**      | GitHub Actions + Vercel                         |
+| Area        | Tech                                                             |
+|-------------|------------------------------------------------------------------|
+| Frontend    | Next.js 15, React, Tailwind CSS, ShadCN UI                       |
+| Backend     | Supabase (PostgreSQL), Prisma ORM                                |
+| Auth        | Clerk (OAuth + Email-based login)                                |
+| AI Features | GEMINI API + OCR for receipt parsing                             |
+| Jobs        | Inngest (CRON jobs: budget alerts, monthly reports, etc.)        |
+| Security    | Arkjet (rate limiting, bot protection, attack shields)           |
+| Dev Tools   | ESLint, Prettier, GitHub Actions (CI/CD)   
 
 ---
 
-## 📖 Getting Started
-
-### 1. Clone & Install
-
-```bash
-git clone https://github.com/yourusername/wealth.git
-cd wealth
-npm install
